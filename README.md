@@ -1,9 +1,12 @@
 # Assignment 3: Bridge Pattern
 
-Student: Arnur Kozhabergen  
-Group: se-2529  
-Topic: A - Drawing  
-Repository: https://github.com/arnur-kozhabergen/sdp.asmnt3  
+Student: Arnur Kozhabergen
+
+Group: se-2529
+
+Topic: A - Drawing
+
+Repository: https://github.com/arnur-kozhabergen/sdp.asmnt3
 Base commit (VectorRenderer and RasterRenderer, T1-T5): `f68abb985a57a5e0be449c3846f21904c680f6a8`
 
 This Java console application keeps the shape hierarchy separate from the renderer hierarchy. A shape stores a `Renderer` reference and delegates its drawing operation through that interface. The same shape can use a different renderer at runtime.
