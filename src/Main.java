@@ -1,3 +1,4 @@
+import drawing.AsciiRenderer;
 import drawing.Circle;
 import drawing.RasterRenderer;
 import drawing.Renderer;
@@ -37,7 +38,11 @@ public class Main {
                 && "RASTER circle radius=2".equals(after);
         printSwitch(switchPassed, sameObject, stateUnchanged, before, after);
 
-        System.out.println("SUMMARY: " + passed + "/5 PASS");
+        Renderer ascii = new AsciiRenderer();
+        check("T6", new Circle("circle-3", 2, ascii), "ASCII (circle radius=2)", "Circle + AsciiRenderer");
+        check("T7", new Square("square-3", 3, ascii), "ASCII [square side=3]", "Square + AsciiRenderer");
+
+        System.out.println("SUMMARY: " + passed + "/7 PASS");
     }
 
     private static void check(String id, Shape shape, String expected, String classes) {
